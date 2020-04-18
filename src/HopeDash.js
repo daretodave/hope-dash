@@ -25,6 +25,33 @@ export class HopeDash extends LitElement {
         left: 0;
       }
 
+      @media (max-width: 968px) {
+        iframe {
+          zoom: 5.5;
+          width: 500px;
+        }
+      }
+      @media (max-width: 868px) {
+        iframe {
+          zoom: 5.5;
+          width: 400px;
+        }
+      }
+
+      @media (max-width: 638px) {
+        iframe {
+          zoom: 2.5;
+          width: 600px;
+        }
+      }
+
+      @media (max-width: 500px) {
+        iframe {
+          zoom: 2.5;
+          width: 500px;
+        }
+      }
+
       .app-footer {
         position: absolute;
         width: 100%;
