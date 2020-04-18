@@ -10,67 +10,48 @@ export class HopeDash extends LitElement {
   }
 
   static get styles() {
+    // language=CSS
     return css`
       :host {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        font-size: calc(10px + 2vmin);
-        color: #1a2b42;
-        max-width: 960px;
-        margin: 0 auto;
-        text-align: center;
+        overflow: hidden
       }
 
-      main {
-        flex-grow: 1;
-      }
-
-      .logo > svg {
-        margin-top: 36px;
-        animation: app-logo-spin infinite 20s linear;
-      }
-
-      @keyframes app-logo-spin {
-        from {
-          transform: rotate(0deg);
-        }
-        to {
-          transform: rotate(360deg);
-        }
+      iframe {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        right: 0;
+        height: 100%;
+        left: 0;
       }
 
       .app-footer {
-        font-size: calc(12px + 0.5vmin);
-        align-items: center;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 50px;
+        background-color: rgb(34, 34, 34);
+        text-align: center;
+        color: blanchedalmond;
+        line-height: 50px;
       }
 
-      .app-footer a {
-        margin-left: 5px;
+      a {
+        color: #d9ae63;
+        text-decoration: none;
       }
     `;
   }
 
   render() {
     return html`
-      <main>
-        <div class="logo">${hopeDashLogo}</div>
-        <h1>hope <small>dash</small></h1>
+      <iframe class="embedly-embed"  frameborder="0" style="border:0"  scrolling="no"  allowfullscreen
+        src="//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fdatastudio.google.com%2Fembed%2Freporting%2F1_-jwGvUIrTH3O6h3LCui9rAopW-7BPAJ%2Fpage%2F1FtMB%3Ffeature%3Doembed&dntp=1&display_name=Google%2BData%2BStudio&url=https%3A%2F%2Fdatastudio.google.com%2Fembed%2Freporting%2F1_-jwGvUIrTH3O6h3LCui9rAopW-7BPAJ%2Fpage%2F1FtMB&image=https%3A%2F%2Fdatastudio.google.com%2Fembed%2Freporting%2F1_-jwGvUIrTH3O6h3LCui9rAopW-7BPAJ%2Fpage%2F1FtMB%2Fthumbnail%3Fsz%3Dw1366-h768-p-nu%26feature%3Doembed&key=4253048189d3442b8a90f022e0d4d49f&type=text%2Fhtml&schema=google">
+      </iframe>
 
-        <p>hi there! <code>hope</code> is a dashboard for <small>X</small></p>
-        <a
-          class="app-link"
-          href="#dash"
-          target="_blank"
-          rel="noopener noreferrer">
-
-         enter
-        </a>
-      </main>
-
-      <p class="app-footer">data mining and source code <a href="#github">here</a></p>
+      <div class="app-footer">hope<small>dash</small> can be found on <a href="#github">github</a></div>
     `;
   }
 }
