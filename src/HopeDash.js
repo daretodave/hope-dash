@@ -1,5 +1,4 @@
 import {LitElement, html, css} from 'lit-element';
-import {hopeDashLogo} from './hope-dash-logo.js';
 
 export class HopeDash extends LitElement {
   static get properties() {
@@ -15,7 +14,7 @@ export class HopeDash extends LitElement {
       :host {
         overflow: hidden
       }
-
+      
       iframe {
         position: absolute;
         width: 100%;
@@ -23,33 +22,6 @@ export class HopeDash extends LitElement {
         right: 0;
         height: 100%;
         left: 0;
-      }
-
-      @media (max-width: 968px) {
-        iframe {
-          zoom: 5.5;
-          width: 500px;
-        }
-      }
-      @media (max-width: 868px) {
-        iframe {
-          zoom: 5.5;
-          width: 400px;
-        }
-      }
-
-      @media (max-width: 638px) {
-        iframe {
-          zoom: 2.5;
-          width: 600px;
-        }
-      }
-
-      @media (max-width: 500px) {
-        iframe {
-          zoom: 2.5;
-          width: 500px;
-        }
       }
 
       .app-footer {
